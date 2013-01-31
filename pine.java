@@ -1,1 +1,1 @@
-System.out.print("j'aime les chattes");
+System.out.print("js");
