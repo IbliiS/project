@@ -1,1 +1,1 @@
-System.out.print("js");
+System.out.print("blue");
