@@ -277,11 +277,32 @@ public class Tab{
 		return (cpt>2);
 	}
 	
-	public void faireNaitre(int i, int j){
+	public void naitreCel(int i, int j){
 		tab[i][j]==1;
 	}
 	
 	public void tuerCel(int i,int j){
 		tab[i][j]==0;
 	}
+	
+	public void unTour(){
+		if(doitOnAgrandir()){
+			agrandir();
+		}
+		for(int i=0;i<tab.length;i++){
+			for(int j=0;j<tab.length;j++){
+				if(tab[i][j]==1){
+					if(!verifVoisinVivante(i,j)){
+						tuerCel(i,j);
+					}
+				}
+				if(tab[i][j]==0){
+					if(verifVoisinNaissance(i,j)){
+						naitreCel(i,j);
+					}
+				}
+			}
+		}
+	}
+	
 }
