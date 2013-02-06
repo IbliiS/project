@@ -285,6 +285,22 @@ public class Tab{
 		tab[i][j]==0;
 	}
 	
+	public void afficher(){
+		for(int i=0;i<tab.length;i++){
+			System.out.print("|");
+			for(int j=0;j<tab.length;j++){
+				if(tab[i][j]==0){
+					System.out.print(" ");
+				}
+				else{
+					System.out.print("X");
+				}
+				System.out.print("|");
+			}
+			System.out.println("");
+		}
+	}
+	
 	public void unTour(){
 		if(doitOnAgrandir()){
 			agrandir();
