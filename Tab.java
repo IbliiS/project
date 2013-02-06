@@ -276,4 +276,12 @@ public class Tab{
 		}
 		return (cpt>2);
 	}
+	
+	public void faireNaitre(int i, int j){
+		tab[i][j]==1;
+	}
+	
+	public void tuerCel(int i,int j){
+		tab[i][j]==0;
+	}
 }
